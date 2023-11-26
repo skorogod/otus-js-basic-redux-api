@@ -177,7 +177,7 @@
 export const createStore: CreateStore&lt;any, any&gt; = (
   reducer,
   initialState,
-  middlewares = []
+  middlewares = [],
 ) =&gt; {
   let state = initialState;
   const callbacks: Set&lt;Function&gt; = new Set();
@@ -186,14 +186,14 @@ export const createStore: CreateStore&lt;any, any&gt; = (
 &nbsp;
   let dispatch: (action: any) =&gt; any = <span class="fstat-no" title="function not covered" >(_</span>action) =&gt; {
 <span class="cstat-no" title="statement not covered" >    throw new Error(</span>
-      "Dispatching while constructing your middleware is not allowed."
+      "Dispatching while constructing your middleware is not allowed.",
     );
   };
 &nbsp;
   const rawDispatch = (action: any) =&gt; {
     state = reducer(state, action);
-    for(const cb of callbacks) {
-        cb();
+    for (const cb of callbacks) {
+      cb();
     }
     return action;
   };
@@ -216,7 +216,7 @@ export const createStore: CreateStore&lt;any, any&gt; = (
 &nbsp;
   dispatch = chain.reduce(
 <span class="fstat-no" title="function not covered" >    (r</span>esult, middleware) =&gt; <span class="cstat-no" title="statement not covered" >middleware(result),</span>
-    rawDispatch
+    rawDispatch,
   );
 &nbsp;
   function <span class="fstat-no" title="function not covered" >replaceReducer(</span>newReducer: any) {
@@ -244,7 +244,7 @@ export const createStore: CreateStore&lt;any, any&gt; = (
         rel="noopener noreferrer"
         >istanbul</a
       >
-      at 2023-11-26T20:48:52.076Z
+      at 2023-11-26T20:52:54.468Z
     </div>
     <script src="prettify.js"></script>
     <script>

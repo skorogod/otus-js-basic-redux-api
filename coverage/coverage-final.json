@@ -43,8 +43,8 @@
         "end": { "line": 23, "column": 5 }
       },
       "10": {
-        "start": { "line": 22, "column": 8 },
-        "end": { "line": 22, "column": 13 }
+        "start": { "line": 22, "column": 6 },
+        "end": { "line": 22, "column": 11 }
       },
       "11": {
         "start": { "line": 24, "column": 4 },
@@ -277,6 +277,6 @@
     },
     "b": { "0": [6] },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "38893df69e9d5c441f16f413b68b34e07f2d1856"
+    "hash": "dd82c71c3eff33f29fc5f034f56e8aad0b563f74"
   }
 }
